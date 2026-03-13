@@ -519,7 +519,7 @@ section{ padding: 44px 0; }
   height: 52px;
   border-radius: 10px;
   border: 1px solid color-mix(in srgb, var(--primary-2) 14%, var(--border));
-  background: color-mix(in srgb, var(--surface-2) 98%, transparent);
+  background: color-mix(in srgb, var(--surface) 99%, transparent);
   display:grid;
   place-items:center;
   margin-bottom: 10px;
