@@ -568,16 +568,15 @@ section{ padding: 44px 0; }
   line-height: 1.55;
 }
 
-/* TEAM */
-.team-grid{
+.team-grid {
   display: flex;
   gap: 18px;
   justify-content: space-between;
   align-items: stretch;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Cambiado de nowrap a wrap */
 }
 
-.member{
+.member {
   flex: 1;
   min-width: 0;
   border-radius: 18px;
@@ -594,15 +593,16 @@ section{ padding: 44px 0; }
   display: flex;
   align-items: center;
   min-height: 90px;
+  width: 100%; /* Para que cada miembro ocupe el 100% del contenedor cuando esté en móvil */
 }
 
-.member:hover{
+.member:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 34px rgba(0, 47, 61, .18);
   border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
 }
 
-.member-title{
+.member-title {
   width: 100%;
   display: flex;
   align-items: center;
@@ -610,7 +610,7 @@ section{ padding: 44px 0; }
   text-align: left;
 }
 
-.member-initial{
+.member-initial {
   width: 42px;
   height: 42px;
   min-width: 42px;
@@ -625,7 +625,7 @@ section{ padding: 44px 0; }
   box-shadow: 0 8px 18px rgba(240, 55, 38, .28);
 }
 
-.member-title b{
+.member-title b {
   display: block;
   width: 100%;
   font-size: 17px;
@@ -633,6 +633,19 @@ section{ padding: 44px 0; }
   letter-spacing: -0.01em;
   color: white;
   font-weight: 800;
+}
+
+/* Media Query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column; /* Cambiar a columna */
+    gap: 12px; /* Reducir espacio entre los miembros */
+  }
+
+  .member {
+    width: 100%; /* Cada miembro ocupará el 100% del contenedor */
+    margin-bottom: 12px; /* Espacio entre los miembros */
+  }
 }
 
 /* OBJECTIVES */
